@@ -5,3 +5,11 @@ metadata:
   labels:
     monitoring-key: "prod"
     owner-mail: "aaa@bbb.ccc"
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+  labels:
+    monitoring-key: "dev"
+    owner-mail: "aaa@bbb.ccc"
