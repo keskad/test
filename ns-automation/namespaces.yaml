@@ -7,4 +7,4 @@ metadata:
       argocd.argoproj.io/sync-options: Prune=false,Delete=false
   labels:
     monitoring-key: "prod"
-    owner-mail: "aaa@bbb.ccc"
+    
