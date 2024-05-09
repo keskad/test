@@ -8,3 +8,11 @@ metadata:
   labels:
     monitoring-key: "prod"
     
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+  annotations:
+      argocd.argoproj.io/sync-options: Prune=false,Delete=false
+  labels:
+    monitoring-key: "dev"
