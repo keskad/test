@@ -1,0 +1,22 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: backend-v1
+    namespace: shop
+    annotations:
+        cert-manager.io/cluster-issuer: local-mtls-issuer
+        nginx.ingress.kubernetes.io/enable-modsecurity: "false"
+spec:
+    ingressClassName: nginx
+    rules:
+        - host: cms.my-org.int
+          http:
+              paths:
+                  - backend:
+                        service:
+                            name: http
+                            port:
+                                number: 80
+                    path: /
+                    pathType: ImplementationSpecific
